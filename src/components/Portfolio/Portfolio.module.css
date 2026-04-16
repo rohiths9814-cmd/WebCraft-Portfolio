@@ -1,0 +1,36 @@
+.section { padding: var(--section-spacing) 0; }
+.header { text-align: center; margin-bottom: 48px; }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 56px;
+}
+.filterBtn {
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+.filterBtn:hover { color: var(--text-secondary); border-color: rgba(124,92,252,0.15); }
+.filterActive {
+  background: rgba(124,92,252,0.1);
+  color: var(--brand-light);
+  border-color: rgba(124,92,252,0.25);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  grid-auto-rows: 1fr;
+}
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
